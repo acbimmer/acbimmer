@@ -1,0 +1,325 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400);
+	* { font-family: 'Roboto', sans-serif; /*line-height:1.2*/; }
+
+#cssmenu {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  width: auto;
+  line-height: 1.2;
+	margin-top: -1em;
+}
+#cssmenu > ul {
+  width: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #004E4E;
+  border: 1px solid #004E4E;
+  border-bottom: 3px solid #004E4E;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+  margin-top: 0px;
+}
+#cssmenu > ul li#responsive-tab {
+  display: none;
+  /* Hide for large screens */
+
+}
+#cssmenu > ul li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+#cssmenu > ul li.right {
+  float: right;
+}
+#cssmenu > ul li.has-sub {
+  position: relative;
+  z-index: 2
+}
+#cssmenu > ul li.has-sub:hover ul {
+  display: block;
+}
+#cssmenu > ul li.has-sub ul {
+  display: none;
+  width: 165px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: #004E4E;
+  border: 1px solid #004E4E;
+  border-bottom: 3px solid #004E4E;
+  border-top: 0 none;
+  text-align: left;
+}
+#cssmenu > ul li.has-sub ul li {
+  display: block;
+}
+#cssmenu > ul li.has-sub > a {
+  background-image: url('images/careticon.png');
+  background-repeat: no-repeat;
+  background-position: 90% -95%;
+}
+#cssmenu > ul li.has-sub > a.active,
+#cssmenu > ul li.has-sub > a:hover {
+  background: #669494 url('images/careticon.png') no-repeat;
+  background-position: 90% 195%;
+
+}
+#cssmenu > ul li a {
+  display: block;
+  padding: 12px 20px 11px 24px;
+  text-decoration: none;
+  color: #FFA500;
+  text-shadow: none;
+}
+
+#cssmenu ul li.active a {
+  color: white;
+}
+#cssmenu > ul li a.active,
+#cssmenu > ul li a:hover {
+  background: #669494;
+  color: #FFA500;
+  text-shadow: none;
+}
+@media (max-width: 600px) {
+  #cssmenu > ul {
+    width: auto;
+  }
+  #cssmenu > ul li#responsive-tab {
+    display: block;
+    font-size: 18px;
+    color: white;
+  }
+  #cssmenu > ul li#responsive-tab a {
+    background: url('images/menuicon.png') no-repeat;
+    background-position: 5% -35%;
+  }
+  #cssmenu > ul li#responsive-tab a:hover {
+    background-color: #669494;
+    background-position: 5% 135%;
+  }
+  #cssmenu > ul li {
+    display: none;
+    font-size: 16px;
+  }
+  #cssmenu > ul li.right {
+    float: none;
+  }
+  #cssmenu > ul li.has-sub {
+    position: relative;
+  }
+  #cssmenu > ul li.has-sub ul {
+    display: block;
+    text-align: center;
+    position: static;
+    width: 100%;
+    background: #002727;
+    border: 0 none;
+  }
+  #cssmenu > ul li.has-sub ul li {
+    display: block !important;
+  }
+  #cssmenu > ul li.has-sub ul li a span {
+    display: block;
+    padding-left: 24px;
+  }
+  #cssmenu > ul li.has-sub > a {
+    background-image: none;
+  }
+  .gea {
+    font-size: 12px;
+  }
+  .google-map iframe {
+    width: 250px;
+    height: 250px;
+  }
+}
+/* Make sure they show even if hidden in mobile view by JS */
+@media (min-width: 600px) {
+  #cssmenu > ul > li.collapsed {
+    display: inline-block !important;
+    *display: inline;
+    zoom: 1;
+  }
+  #cssmenu > ul ul li.collapsed {
+    display: block !important;
+  }
+}
+
+h2 {
+  float: center;
+  position: relative;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+body {
+    /*background-color: #DBDBDB;*/
+  background: #FF512F; /* fallback for old browsers */
+  background: -webkit-linear-gradient(#F09819, #FF512F); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(#F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  zoom: 1.05;
+}
+
+.sales {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+.contact {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+.location {
+  display: block;
+  float: right;
+  position: relative;
+  width: 100%;
+  margin-top: 2.25em;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+}
+
+input[type=text], input[type=email] {
+  -webkit-appearance: none; -moz-appearance: none;
+  display: block;
+  margin: 0;
+  width: 70%; height: 2.25em;
+  line-height: 40px; font-size: 17px;
+  border: 1px solid #bbb;
+}
+
+.message {
+  display: block;
+  margin: 0;
+  width: 70%; height: 8em;
+  line-height: 40px; font-size: 17px;
+  border: 1px solid #bbb;
+  overflow: auto;
+  resize: vertical;
+}
+
+.container-fluid {
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 85%;
+  height: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  background-color: #F7F7F7;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+}
+
+.row {
+    padding-top: 10px;
+    position: relative;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.col-md-4 {
+    position: relative;
+    width: 20%;
+}
+
+p.whitespace {
+    text-align: justify;
+    word-spacing: 0px;
+    width: 95%;
+}
+
+.footer {
+    float: center;
+    position: relative;
+    width: 100% !important;
+    padding-top: 2em;
+}
+
+#navbar {
+  position: relative;
+  float: center;
+  width: auto !important;
+  height: 43px;
+  padding: 0.15em;
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+  margin-bottom: 0px;
+  overflow: hidden;
+  background-color: #004E4E;
+  color: #FFA500;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media {
+  img {
+    width: auto; /* for ie 8 */
+  }
+}
+
+img.social {
+    float: right;
+    padding: 2px;
+
+}
+
+a {
+  color: #FFA500;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: 7em;
+  height: 2em;
+  line-height: 2;
+  border-radius: 7%;
+  font-size: 0.9em;
+  background-color: #195F5F;
+  color: #FFA500;
+}
+
+.button > paper-ripple {
+  border-radius: 7%;
+  overflow: hidden;
+}
+
+.button.raised {
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.button.raised:active {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  transition-delay: 0s;
+}
